@@ -6,6 +6,10 @@ const PORT = 5000;
 //connecting mongodb
 connectDB();
 
+// inatiliza middle ware
+
+app.use(express.json({extended:false}))
+
 app.get('/', (req , res) => {res.json({"message":"Hello Abdullah"})});
 
 //defining routes
